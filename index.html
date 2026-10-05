@@ -1,73 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portafolio de Abrahan Hernández Amado, programador web y futuro ingeniero mecatrónico.">
     <title>HzAbrahmDev</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/images/AbrahmDev.png">
+    <script src="apps.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Isometra&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+        rel="stylesheet">
+
 </head>
 
 <body>
     <header>
-        <img src="" alt="mi logo" class="icon">
-        <div id="header1">
-            <h3>
-                HzAbrahmDev
-            </h3>
-        </div>
-        <div id="header2">
-            <button class="btnH">theme</button>
-            <button class="btnH">languaje</button>
-        </div>
+        <a href="#inicio" id="header1">HzAbrahmDev</a>
+
+        <nav id="header2">
+            <a href="#inicio">Inicio</a>
+            <a href="#projects">Proyectos</a>
+            <a href="#mi-contacto">Contacto</a>
+            <button type="button" class="btnH">Tema</button>
+            <button type="button" class="btnH">Idioma</button>
+        </nav>
     </header>
+
     <main>
-        <section>
-            <h2>Hola, yo soy:</h2>
+        <section id="inicio">
+            <p>Hola, yo soy:</p>
             <h1>Abrahan Hernández Amado</h1>
-            <p>Programador web y futuro ingeniero mecatrónico. Me gusta aprender nuevas tecnologias y mejorar mis
+            <p>Programador web y futuro ingeniero mecatrónico. Me gusta aprender nuevas tecnologías y mejorar mis
                 habilidades constantemente.
             </p>
-            <p>Me gusta aprender diferentes tecnologias. ¡Espero poder contribuir en proyectos interesantes!</p>
-            <a href="#mi-contacto" class="btn">Contactame</a>
+            <p>¡Espero poder contribuir en proyectos interesantes!</p>
+            <a href="#mi-contacto" class="btn">Contáctame</a>
         </section>
-        <section id="projects">
-            <h2>Proyectos</h2>
-            <div class="project">
-                <h3>Proyecto 1</h3>
-                <p>Descripción del proyecto 1.</p>
-            </div>
-            <div class="project">
-                <h3>Proyecto 2</h3>
-                <p>Descripción del proyecto 2.</p>
+        <section id="Habilidades">
+            <h2>Habilidades</h2>
+            <div id="habilities-container">
+                <div class="habilidad">HTML</div>
+                <div class="habilidad">CSS</div>
+                <div class="habilidad">JavaScript</div>
+                <div class="habilidad">Node.js</div>
             </div>
         </section>
-        <section id="mi-contacto">
-            <h2>¡Contactame!</h2>
-            <p>¡Estoy emocionado de poder trabajar contigo!</p>
-        </section>
-        <form>
-            <fieldset>
-                <legend>formulario de contacto</legend>
 
-                <label>Nombre Completo*:
-                    <input type="text" name="nombre" required>
-                </label>
-                <label>Email*:
-                    <input type="email" name="email" required>
-                </label>
-                <label>Telefono*:
-                    <input type="tel" name="telefono" required>
-                </label>
-                <label>resumen del proyecto*:
-                    <textarea name="mensaje" required></textarea>
-                </label>
-            </fieldset>
-            <button type="submit">Enviar</button>
-        </form>
+        <section id="projects">
+
+            <h2>Proyectos</h2>
+            <div id="project-list">
+                <article class="project">
+                    <h3>Proyecto 1</h3>
+                    <p>Descripción del proyecto 1.</p>
+                </article>
+
+                <article class="project">
+                    <h3>Proyecto 2</h3>
+                    <p>Descripción del proyecto 2.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="mi-contacto">
+            <h2>¡Contáctame!</h2>
+            <p>¡Estoy emocionado de poder trabajar contigo!</p>
+
+            <form>
+                <fieldset>
+                    <legend>Formulario de contacto</legend>
+
+                    <label>Nombre completo*:
+                        <input type="text" name="nombre" autocomplete="name" required>
+                    </label>
+
+                    <label>Email*:
+                        <input type="email" name="email" autocomplete="email" required>
+                    </label>
+
+                    <label>Teléfono*:
+                        <input type="tel" name="telefono" autocomplete="tel" required>
+                    </label>
+
+                    <label>Resumen del proyecto*:
+                        <textarea name="mensaje" rows="5" maxlength="500" required></textarea>
+                    </label>
+                </fieldset>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
     </main>
+
     <footer>
-        <p>© 2026 HzAbrahmDev. All rights reserved.</p>
+        <p>© 2026 HzAbrahmDev. Todos los derechos reservados.</p>
     </footer>
 </body>
 

@@ -1,0 +1,54 @@
+ :root{
+    --fuente-primaria: "JetBrains Mono", monospace;
+    --fuente-secundaria: "Isometra", serif;
+    --color-primario: #84E2EE;
+    --color-secundario: #537FB8;
+    --color-terciario: #FF8004;
+    --color-cuartiario: #FFE023;
+    --color-quintinario: #535852;
+ }
+ body{
+  max-width: 100%;
+  margin: 0;
+  top: 0;
+  background-color: var(--color-cuartiario);
+
+
+ }
+ #projects{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-terciario);
+  padding: 20px;
+ }
+ #project-list{
+  display: flex;
+  flex-direction: column;
+ 
+ }
+.project{
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  max-width: 300px;
+
+  background-color: var(--color-primario);
+}
+ p{
+   font-family: var(--fuente-primaria);
+   
+ }
+ h1{
+  font-family: var(--fuente-secundaria);
+ }
+ h2{
+  font-family: var(--fuente-secundaria);
+ }
+   /* tablet */
+@media (max-width: 1024px) {
+
+}
+  /* pc */
+@media (max-width: 100%) {
+
+}
