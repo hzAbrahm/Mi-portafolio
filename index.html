@@ -20,15 +20,24 @@
 
 <body>
     <header>
-        <a href="#inicio" id="header1">HzAbrahmDev</a>
+        <div id="header-container">
+            <div id="header1-container">
+                <img src="assets/images/AbrahmDev.png" alt="Logo de HzAbrahmDev" width="35" height="35">
+                <a href="#inicio" id="header1">HzAbrahmDev</a>
+            </div>
+            <div id="hamburguer">
+                <button type="button" class="btnH">Tema</button>
+                <button type="button" class="btnH">Idioma</button>
+            </div>
+        </div>
 
         <nav id="header2">
             <a href="#inicio">Inicio</a>
             <a href="#projects">Proyectos</a>
             <a href="#mi-contacto">Contacto</a>
-            <button type="button" class="btnH">Tema</button>
-            <button type="button" class="btnH">Idioma</button>
+            <a href="#Habilidades">Habilidades</a>
         </nav>
+
     </header>
 
     <main>
@@ -70,29 +79,32 @@
         <section id="mi-contacto">
             <h2>¡Contáctame!</h2>
             <p>¡Estoy emocionado de poder trabajar contigo!</p>
+            <div id="contact-form">
+                <form>
+                    <fieldset>
+                        <div id="form-fields">
+                            <legend>Formulario de contacto</legend>
 
-            <form>
-                <fieldset>
-                    <legend>Formulario de contacto</legend>
+                            <label>Nombre completo*:
+                                <input type="text" name="nombre" autocomplete="name" required>
+                            </label>
 
-                    <label>Nombre completo*:
-                        <input type="text" name="nombre" autocomplete="name" required>
-                    </label>
+                            <label>Email*:
+                                <input type="email" name="email" autocomplete="email" required>
+                            </label>
 
-                    <label>Email*:
-                        <input type="email" name="email" autocomplete="email" required>
-                    </label>
+                            <label>Teléfono*:
+                                <input type="tel" name="telefono" autocomplete="tel" required>
+                            </label>
 
-                    <label>Teléfono*:
-                        <input type="tel" name="telefono" autocomplete="tel" required>
-                    </label>
-
-                    <label>Resumen del proyecto*:
-                        <textarea name="mensaje" rows="5" maxlength="500" required></textarea>
-                    </label>
-                </fieldset>
-                <button type="submit">Enviar</button>
-            </form>
+                            <label>Resumen del proyecto*:
+                                <textarea name="mensaje" rows="5" maxlength="500" required></textarea>
+                            </label>
+                        </div>
+                    </fieldset>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
         </section>
     </main>
 
