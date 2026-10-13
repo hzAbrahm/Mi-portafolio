@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Isometra&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Isometra&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
         rel="stylesheet">
 
 </head>
@@ -22,46 +22,87 @@
     <header>
         <div id="header-container">
             <div id="header1-container">
-                <img src="assets/images/AbrahmDev.png" alt="Logo de HzAbrahmDev" width="35" height="35">
+                <img src="assets/images/AbrahmDev.png" alt="Logo de HzAbrahmDev" width="50" height="50">
                 <a href="#inicio" id="header1">HzAbrahmDev</a>
             </div>
             <div id="hamburguer">
+                <button type="button" class="btnH" id="btn-menu" aria-label="Abrir menú"
+                    aria-expanded="false">Menú</button>
                 <button type="button" class="btnH">Tema</button>
                 <button type="button" class="btnH">Idioma</button>
             </div>
         </div>
 
-        <!-- <nav id="header2">
+        <nav id="header2">
             <a href="#inicio" class="nav-link">Inicio</a>
             <a href="#projects" class="nav-link">Proyectos</a>
             <a href="#mi-contacto" class="nav-link">Contacto</a>
             <a href="#Habilidades" class="nav-link">Habilidades</a>
-        </nav> -->
+        </nav>
 
     </header>
 
     <main>
         <section id="inicio">
-            <p>Hola, yo soy:</p>
-            <h1>Abrahan Hernández Amado</h1>
+            <p class="saludo">Hola, yo soy:</p>
+            <h1>Abrahan Hernández <span class="acento">Amado</span></h1>
             <p>Programador web y futuro ingeniero mecatrónico. Me gusta aprender nuevas tecnologías y mejorar mis
                 habilidades constantemente.
             </p>
             <p>¡Espero poder contribuir en proyectos interesantes!</p>
             <a href="#mi-contacto" class="btn">Contáctame</a>
         </section>
+
+        <div class="divisor" aria-hidden="true">//</div>
+
         <section id="Habilidades">
             <div id="habilities-2">
                 <h2>Habilidades</h2>
                 <div id="habilities-container">
-                    <span>HTML</span>
-                    <div class="habilidad">HTML</div>
-                    <div class="habilidad">CSS</div>
-                    <div class="habilidad">JavaScript</div>
-                    <div class="habilidad">Node.js</div>
+                    <div class="habilidad">
+                        <div class="habilidad-info">
+                            <span class="habilidad-nombre">HTML</span>
+                            <div class="barra">
+                                <div class="progreso" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <span class="habilidad-porcentaje">90%</span>
+                    </div>
+
+                    <div class="habilidad">
+                        <div class="habilidad-info">
+                            <span class="habilidad-nombre">CSS</span>
+                            <div class="barra">
+                                <div class="progreso" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <span class="habilidad-porcentaje">80%</span>
+                    </div>
+
+                    <div class="habilidad">
+                        <div class="habilidad-info">
+                            <span class="habilidad-nombre">JavaScript</span>
+                            <div class="barra">
+                                <div class="progreso" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <span class="habilidad-porcentaje">70%</span>
+                    </div>
+
+                    <div class="habilidad">
+                        <div class="habilidad-info">
+                            <span class="habilidad-nombre">Node.js</span>
+                            <div class="barra">
+                                <div class="progreso" style="width: 60%"></div>
+                            </div>
+                        </div>
+                        <span class="habilidad-porcentaje">60%</span>
+                    </div>
                 </div>
             </div>
         </section>
+
+        <div class="divisor" aria-hidden="true">//</div>
 
         <section id="projects">
 
@@ -78,6 +119,8 @@
                 </article>
             </div>
         </section>
+
+        <div class="divisor" aria-hidden="true">//</div>
 
         <section id="mi-contacto">
             <h2>¡Contáctame!</h2>
