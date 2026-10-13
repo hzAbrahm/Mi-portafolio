@@ -2,42 +2,40 @@
    --fuente-primaria: "JetBrains Mono", monospace;
    --fuente-secundaria: "Isometra", serif;
    --color-primario: #84E2EE;
-   --color-secundario: #537FB8;
-   --color-terciario: #FF8004;
+   --color-secundario: #FF8004;
    --color-cuartiario: #FFE023;
-   --color-quintinario: #535852;
+   --fondo-color1: #FF8004;
+   --fondo-color2: #080808;
+   --altura-header: 60px;
+   --textocolor-1: #000000;
+   --textocolor-2: #FFFFFF;
+ }
+
+ html {
+   scroll-padding-top: var(--altura-header);
  }
 
  header {
-   background-color: var(--color-terciario);
+   background-color: var(--fondo-color2);
    position: sticky;
    top: 0;
+   padding: 5px;
+   opacity: 0.976;
+   
  }
 
- #header2 {
-   text-decoration: none;
-   color: rgb(0, 0, 0);
+ /*#header2 {
    display: flex;
    justify-content: space-around;
    padding: 3px;
-   border-color: var(--color-terciario);
-   border-width: 2px;
-   border-style: double;
 
- }
-
- #header1 {
-   text-decoration: none;
-   color: rgb(0, 0, 0);
- }
-
- 
-
+ } */
 
  #header-container {
    display: flex;
    justify-content: space-between;
    align-items: center;
+   height: 50px;
  }
 
  #header1-container {
@@ -46,13 +44,33 @@
    align-items: center;
  }
 
+ /*.nav-link {
+   text-decoration: none;
+   color: var(--textocolor-2);
+   font-family: var(--fuente-secundaria);
+ }
+*/
+ #header1 {
+   text-decoration: none;
+   color: var(--textocolor-2);
+   font-family: var(--fuente-primaria);
+ }
+
+ .btn {
+   background-color: var(--fondo-color1);
+   color: var(--textocolor-2);
+   padding: 10px 20px;
+   text-decoration: none;
+   border-radius: 30px;
+ } 
+
  footer {
    display: flex;
    justify-content: center;
    align-items: center;
-   background-color: var(--color-quintinario);
-   color: white;
-   padding: 20px;
+   background-color: var(--fondo-color1);
+   color: var(--textocolor-2);
+   padding: 10px;
  }
 
  body {
@@ -102,6 +120,7 @@
 
  h2 {
    font-family: var(--fuente-secundaria);
+   text-align: center;
  }
 
  #Habilidades {
@@ -119,18 +138,43 @@
    max-width: 100%;
  }
 
+ #habilities-2 {
+   align-items: center;
+   box-sizing: border-box;
+   max-width: 75%;
+   margin: 0 auto;
+
+
+ }
+
  .habilidad {
    background-color: white;
    padding: 5px;
    border-radius: 20px;
+   margin-bottom: 25px;
 
  }
 
- #form-fields {
+ #mi-contacto {
+   padding: 20px;
+ }
+
+ #contact-form {
    display: flex;
    flex-direction: column;
-   max-width: border-box;
+   box-sizing: border-box;
+   max-width: 80%;
+   background-color: var(--color-terciario);
+   padding: 20px;
+   border-radius: 16px;
+   margin: 0 auto;
+ }
 
+ .form-group {
+   display: flex;
+   flex-direction: column;
+   margin-bottom: 10px;
+   font-family: var(--fuente-primaria);
  }
 
  /* tablet */
