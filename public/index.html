@@ -22,22 +22,27 @@
     <header>
         <div id="header-container">
             <div id="header1-container">
-                <img src="assets/images/AbrahmDev.png" alt="Logo de HzAbrahmDev" width="50" height="50">
+                <img src="assets/images/AbrahmDev.png" alt="Logo de HzAbrahmDev" width="35" height="35">
                 <a href="#inicio" id="header1">HzAbrahmDev</a>
             </div>
             <div id="hamburguer">
                 <button type="button" class="btnH" id="btn-menu" aria-label="Abrir menú"
                     aria-expanded="false">Menú</button>
-                <button type="button" class="btnH">Tema</button>
-                <button type="button" class="btnH">Idioma</button>
             </div>
         </div>
 
         <nav id="header2">
-            <a href="#inicio" class="nav-link">Inicio</a>
-            <a href="#projects" class="nav-link">Proyectos</a>
-            <a href="#mi-contacto" class="nav-link">Contacto</a>
-            <a href="#Habilidades" class="nav-link">Habilidades</a>
+            <ul>
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#acerca" class="nav-link">Acerca de mí</a></li>
+                <li><a href="#Habilidades" class="nav-link">Habilidades</a></li>
+                <li><a href="#projects" class="nav-link">Proyectos</a></li>
+                <li><a href="#mi-contacto" class="nav-link">Contacto</a></li>
+            </ul>
+            <div class="menu-opciones">
+                <button type="button" class="btnH" id="btn-tema">Tema</button>
+                <button type="button" class="btnH" id="btn-idioma">Idioma</button>
+            </div>
         </nav>
 
     </header>
@@ -51,6 +56,16 @@
             </p>
             <p>¡Espero poder contribuir en proyectos interesantes!</p>
             <a href="#mi-contacto" class="btn">Contáctame</a>
+        </section>
+
+        <div class="divisor" aria-hidden="true">//</div>
+
+        <section id="acerca">
+            <h2>Acerca de mí</h2>
+            <img class="foto-perfil" src="assets/images/foto-perfil.jpg" alt="Retrato de Abrahan Hernández Amado"
+                width="200" height="200">
+            <p>Escribe aquí una primera descripción sobre ti: quién eres y qué estudias.</p>
+            <p>Escribe aquí una segunda descripción: qué te motiva y qué te gustaría lograr.</p>
         </section>
 
         <div class="divisor" aria-hidden="true">//</div>
@@ -109,13 +124,17 @@
             <h2>Proyectos</h2>
             <div id="project-list">
                 <article class="project">
+                    <div class="project-img"></div>
                     <h3>Proyecto 1</h3>
                     <p>Descripción del proyecto 1.</p>
+                    <a href="#" class="project-enlace">Ver proyecto →</a>
                 </article>
 
                 <article class="project">
+                    <div class="project-img"></div>
                     <h3>Proyecto 2</h3>
                     <p>Descripción del proyecto 2.</p>
+                    <a href="#" class="project-enlace">Ver proyecto →</a>
                 </article>
             </div>
         </section>
@@ -125,6 +144,13 @@
         <section id="mi-contacto">
             <h2>¡Contáctame!</h2>
             <p>¡Estoy emocionado de poder trabajar contigo!</p>
+
+            <ul class="contacto-info">
+                <li class="info-item"><strong>Email</strong> <span>tu-correo@ejemplo.com</span></li>
+                <li class="info-item"><strong>Teléfono</strong> <span>+00 000 000 0000</span></li>
+                <li class="info-item"><strong>Ubicación</strong> <span>Tu ciudad, tu país</span></li>
+            </ul>
+
             <form id="contact-form">
                 <div id="form-fields">
                     <div class="form-group">
@@ -150,6 +176,11 @@
     </main>
 
     <footer>
+        <ul class="footer-enlaces">
+            <li><a href="https://www.linkedin.com/in/tu-usuario" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </li>
+            <li><a href="https://github.com/tu-usuario" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        </ul>
         <p>© 2026 HzAbrahmDev. Todos los derechos reservados.</p>
     </footer>
 </body>
