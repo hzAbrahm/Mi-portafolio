@@ -1,3 +1,13 @@
+ body.tema-claro {
+   --fondo-color2: #F5F5F5;
+   --textocolor-2: #1A1A1A;
+   --color-terciario: #FFFFFF;
+   --color-borde: #D9D9D9;
+   --color-pista: #E6E6E6;
+   --color-acento: #C2410C;
+ }
+
+
  :root {
    --fuente-primaria: "JetBrains Mono", monospace;
    --fuente-secundaria: "Isometra", serif;
@@ -23,6 +33,7 @@
  h1 {
    font-family: var(--fuente-secundaria);
    line-height: 1.05;
+   box-sizing: border-box;
  }
 
  h2 {
@@ -154,7 +165,32 @@
 
  #inicio {
    position: relative;
-   padding-top: 24px;
+   box-sizing: border-box;
+   min-height: calc(100svh - var(--altura-header));
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding: 24px 20px;
+ }
+
+ .inicio-contenido {
+   position: relative;
+   z-index: 1;
+   max-width: 75%;
+ }
+
+ .inicio-contenido h1 {
+   font-size: clamp(1.75rem, 9vw, 2.5rem);
+   max-width: 256px; 
+ }
+
+ .inicio-decoracion {
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   width: 30%;
+   pointer-events: none;
  }
 
  .btn {
@@ -190,16 +226,28 @@
    gap: 16px;
  }
 
- #acerca p {
+ #acerca h2 {
    margin: 0;
  }
 
  .foto-perfil {
-   width: 160px;
-   height: 160px;
-   border-radius: 50%;
+   width: 200px;
+   height: 200px;
+   flex-shrink: 0;
+   border-radius: 16px;
    object-fit: cover;
    border: 3px solid var(--color-acento);
+ }
+
+ .acerca-info {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   gap: 12px;
+ }
+
+ .acerca-info p {
+   margin: 0;
  }
 
  #projects {
@@ -244,8 +292,98 @@
  }
 
  .project-enlace {
+   align-self: flex-start;
+   padding: 0;
+   background: none;
+   border: none;
    color: var(--color-acento);
-   text-decoration: none;
+   font-family: inherit;
+   font-size: 1rem;
+   cursor: pointer;
+ }
+
+ .modal {
+   width: min(92vw, 480px);
+   max-height: 85svh;
+   padding: 20px;
+   background-color: var(--color-terciario);
+   color: var(--textocolor-2);
+   border: 1px solid var(--color-borde);
+   border-radius: 16px;
+   overflow-y: auto;
+ }
+
+ .modal[open] {
+   display: flex;
+   flex-direction: column;
+   gap: 14px;
+ }
+
+ .modal::backdrop {
+   background-color: rgba(0, 0, 0, 0.7);
+ }
+
+ .modal-cerrar {
+   position: absolute;
+   top: 12px;
+   right: 12px;
+   width: 36px;
+   height: 36px;
+   background: transparent;
+   color: var(--textocolor-2);
+   border: 1px solid var(--color-borde);
+   border-radius: 50%;
+   font-size: 1.2rem;
+   cursor: pointer;
+ }
+
+ .modal-categoria {
+   margin: 0;
+   color: var(--color-acento);
+   font-size: 0.8rem;
+   letter-spacing: 0.1em;
+   text-transform: uppercase;
+ }
+
+ .modal h3 {
+   margin: 0;
+   padding-right: 44px;
+   font-family: var(--fuente-secundaria);
+ }
+
+ .modal-imagen {
+   width: 100%;
+   height: auto;
+   border-radius: 10px;
+ }
+
+ .modal p {
+   margin: 0;
+ }
+
+ .modal-tecnologias {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 8px;
+   margin: 0;
+   padding: 0;
+   list-style: none;
+ }
+
+ .modal-tecnologias li {
+   padding: 4px 12px;
+   background-color: var(--color-pista);
+   border: 1px solid var(--color-borde);
+   border-radius: 20px;
+   font-size: 0.85rem;
+ }
+
+ .modal-deco {
+   min-height: 16px;
+ }
+
+ .modal .btn {
+   justify-content: center;
  }
 
  #Habilidades {
@@ -290,17 +428,11 @@
  }
 
  .progreso {
+   width: 0;
    height: 100%;
    background-color: var(--color-acento);
    border-radius: 8px;
-   animation: llenar 1.2s ease-out;
- }
-
- @keyframes llenar {
-   from {
-     width: 0;
-   }
-
+   transition: width 1.2s ease-out;
  }
 
  .habilidad-porcentaje {
@@ -419,7 +551,70 @@
  }
 
  /* tablet */
- @media (max-width: 1024px) {}
+ @media (min-width: 800px) {
+
+   #acerca {
+     flex-direction: row;
+     flex-wrap: wrap;
+     align-items: center;
+     align-content: center;
+     gap: 24px 48px;
+     box-sizing: border-box;
+     width: 100%;
+     max-width: 1100px;
+     min-height: 60vh;
+     margin: 0 auto;
+     padding: 60px 40px;
+   }
+
+   #acerca h2 {
+     flex: 0 0 100%;
+     font-size: 2.8rem;
+   }
+
+   .foto-perfil {
+     width: 300px;
+     height: 300px;
+   }
+
+   .acerca-info {
+     flex: 1;
+     gap: 20px;
+     font-size: 1.1rem;
+   }
+ }
+
 
  /* pc */
- @media (max-width: 100%) {}
+ @media (min-width: 1024px) {
+
+   #acerca {
+     flex-direction: row;
+     flex-wrap: wrap;
+     align-items: center;
+     align-content: center;
+     gap: 24px 48px;
+     box-sizing: border-box;
+     width: 100%;
+     max-width: 1100px;
+     min-height: 60vh;
+     margin: 0 auto;
+     padding: 60px 40px;
+   }
+
+   #acerca h2 {
+     flex: 0 0 100%;
+     font-size: 2.8rem;
+   }
+
+   .foto-perfil {
+     width: 300px;
+     height: 300px;
+   }
+
+   .acerca-info {
+     flex: 1;
+     gap: 20px;
+     font-size: 1.1rem;
+   }
+ }
