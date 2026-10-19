@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio de Abrahan Hernández Amado">
+    <title>HzAbrahmDev</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/images/AbrahmDev.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Isometra&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div id="header-container">
+            <div id="header1-container">
+                <img src="assets/images/AbrahmDev.png" alt="Logo de HzAbrahmDev" width="35" height="35">
+                <a href="#inicio" id="header1">HzAbrahmDev</a>
+            </div>
+            <div id="hamburguer">
+                <button type="button" class="btnH" id="btn-menu" aria-label="Abrir menú" aria-expanded="false"
+                    data-i18n="btn-menu">Menú</button>
+            </div>
+        </div>
+
+        <nav id="header2">
+            <ul>
+                <li><a href="#inicio" class="nav-link" data-i18n="nav-inicio">Inicio</a></li>
+                <li><a href="#acerca" class="nav-link" data-i18n="nav-acerca">Acerca de mí</a></li>
+                <li><a href="#Habilidades" class="nav-link" data-i18n="nav-habilidades">Habilidades</a></li>
+                <li><a href="#projects" class="nav-link" data-i18n="nav-proyectos">Proyectos</a></li>
+                <li><a href="#mi-contacto" class="nav-link" data-i18n="nav-contacto">Contacto</a></li>
+            </ul>
+            <div class="menu-opciones">
+                <button type="button" class="btnH" id="btn-tema" data-i18n="btn-tema">Tema</button>
+                <button type="button" class="btnH" id="btn-idioma" data-i18n="btn-idioma">Idioma</button>
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <section id="inicio">
+            <div class="inicio-contenido">
+                <p class="saludo" data-i18n="inicio-saludo">Hola, yo soy:</p>
+                <h1>Abrahan Hernández <span class="acento">Amado</span></h1>
+                <p data-i18n="inicio-p1">Programador web y futuro ingeniero mecatrónico. Me gusta aprender nuevas
+                    tecnologías y mejorar mis habilidades constantemente.
+                </p>
+                <p data-i18n="inicio-p2">¡Espero poder contribuir en proyectos interesantes!</p>
+                <a href="#mi-contacto" class="btn" data-i18n="inicio-btn">Contáctame</a>
+            </div>
+            <div class="inicio-decoracion" aria-hidden="true"></div>
+        </section>
+
+        <div class="divisor" aria-hidden="true">//</div>
+
+        <section id="acerca">
+            <h2 data-i18n="acerca-titulo">Acerca de mí</h2>
+            <img class="foto-perfil" src="assets/images/foto-perfil.jpeg" alt="Retrato de Abrahan Hernández Amado"
+                width="200" height="200">
+            <div class="acerca-info">
+                <p data-i18n="acerca-p1">Soy una persona apasioanada por el arte urbano, la robotica y los videojuegos.
+                    Me encanta darle ese estilo
+                    grafiti a mis proyectos.</p>
+                <p data-i18n="acerca-p2">Me motiva la idea de compartir el arte urbano al mundo y el ayudar a los demas
+                    a lograr sus sueños, con
+                    mis proyectos quiero lograr innovar con cosas que puedan ayudar a todo el mundo sin importar desde
+                    donde venga.</p>
+                <a href="#mi-contacto" class="btn" data-i18n="acerca-btn">¡Trabajemos juntos!</a>
+            </div>
+        </section>
+
+        <div class="divisor" aria-hidden="true">//</div>
+
+        <section id="Habilidades">
+            <div id="habilities-2">
+                <h2 data-i18n="habilidades-titulo">Habilidades</h2>
+                <div id="habilities-container">
+                    <div class="habilidad">
+                        <div class="habilidad-info">
+                            <span class="habilidad-nombre">HTML</span>
+                            <div class="barra">
+                                <div class="progreso" data-ancho="90%"></div>
+                            </div>
+                        </div>
+                        <span class="habilidad-porcentaje">90%</span>
+                    </div>
+                    <div class="habilidad">
+                        <div class="habilidad-info">
+                            <span class="habilidad-nombre">CSS</span>
+                            <div class="barra">
+                                <div class="progreso" data-ancho="75%"></div>
+                            </div>
+                        </div>
+                        <span class="habilidad-porcentaje">75%</span>
+                    </div>
+                    <div class="habilidad">
+                        <div class="habilidad-info">
+                            <span class="habilidad-nombre">JavaScript</span>
+                            <div class="barra">
+                                <div class="progreso" data-ancho="60%"></div>
+                            </div>
+                        </div>
+                        <span class="habilidad-porcentaje">60%</span>
+                    </div>
+                    <div class="habilidad">
+                        <div class="habilidad-info">
+                            <span class="habilidad-nombre" data-i18n="habilidad-diseno">Diseño</span>
+                            <div class="barra">
+                                <div class="progreso" data-ancho="80%"></div>
+                            </div>
+                        </div>
+                        <span class="habilidad-porcentaje">80%</span>
+                    </div>
+                    <div class="habilidad">
+                        <div class="habilidad-info">
+                            <span class="habilidad-nombre">Node.js</span>
+                            <div class="barra">
+                                <div class="progreso" data-ancho="55%"></div>
+                            </div>
+                        </div>
+                        <span class="habilidad-porcentaje">55%</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divisor" aria-hidden="true">//</div>
+
+        <section id="projects">
+
+            <h2 data-i18n="proyectos-titulo">Proyectos</h2>
+            <div id="project-list">
+                <article class="project" data-titulo="CALLES-DULCES" data-categoria-i18n="categoria-web"
+                    data-descripcion-i18n="calles-desc" data-estado="progreso" data-imagen="assets/images/CD.png"
+                    data-enlace="https://hzAbrahm.github.io/Calles-Dulces" data-tecnologias="HTML,CSS,JavaScript">
+                    <div class="project-img"></div>
+                    <h3>CALLES DULCES</h3>
+                    <p data-i18n="calles-lema">Una endulzada con doble alegría</p>
+                    <button type="button" class="project-enlace" data-i18n="proyecto-detalles">Ver detalles →</button>
+                </article>
+
+                <article class="project" data-titulo="Kosmu shop" data-categoria-i18n="categoria-web"
+                    data-descripcion-i18n="kosmu-desc" data-estado="progreso" data-imagen="assets/images/kosmu.jpeg"
+                    data-enlace="https://hzAbrahm.github.io/Kosmushop" data-tecnologias="HTML,CSS,JavaScript">
+                    <div class="project-img"></div>
+                    <h3>Kosmu shop</h3>
+                    <p data-i18n="kosmu-lema">crea tu estilo</p>
+                    <button type="button" class="project-enlace" data-i18n="proyecto-detalles">Ver detalles →</button>
+                </article>
+
+                <article class="project project-proximo">
+                    <div class="proximo-fondo" aria-hidden="true">
+                        <div class="project-img"></div>
+                        <h3>CALLES DULCES</h3>
+                        <p>una endulzada con doble alegria</p>
+                        <span class="falso-enlace">Ver detalles →</span>
+                    </div>
+                    <p class="proximo-texto" data-i18n="proximo-texto">¡Más proyectos muy pronto!</p>
+                </article>
+            </div>
+        </section>
+
+        <div class="divisor" aria-hidden="true">//</div>
+
+        <section id="mi-contacto">
+            <h2 data-i18n="contacto-titulo">¡Contáctame!</h2>
+            <p data-i18n="contacto-texto">¡Estoy emocionado de poder trabajar contigo!</p>
+
+            <ul class="contacto-info">
+                <li class="info-item"><strong data-i18n="contacto-email">Email</strong>
+                    <span>hzabrahm2009@gmail.com</span>
+                </li>
+                <li class="info-item"><strong data-i18n="contacto-telefono">Teléfono</strong> <span>+57 311 524
+                        4074</span></li>
+                <li class="info-item"><strong data-i18n="contacto-ubicacion">Ubicación</strong>
+                    <span>Bogota-Colombia</span>
+                </li>
+            </ul>
+
+            <form id="contact-form">
+                <div id="form-fields">
+                    <div class="form-group">
+                        <label for="nombre" data-i18n="form-nombre">Nombre completo*:</label>
+                        <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" data-i18n="form-email">Email*:</label>
+                        <input type="email" id="email" name="email" autocomplete="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono" data-i18n="form-telefono">Teléfono*:</label>
+                        <input type="tel" id="telefono" name="telefono" autocomplete="tel" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje" data-i18n="form-mensaje">Resumen del proyecto*:</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" maxlength="500" required></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btnF" data-i18n="form-enviar">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <ul class="footer-enlaces">
+            <li><a href="https://www.linkedin.com/in/hzAbrahm" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </li>
+            <li><a href="https://github.com/hzAbrahm" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        </ul>
+        <p data-i18n="footer-derechos">© 2026 HzAbrahmDev. Todos los derechos reservados.</p>
+    </footer>
+
+    <dialog id="modal-proyecto" class="modal">
+        <button type="button" class="modal-cerrar" aria-label="Cerrar">×</button>
+        <div class="modal-deco" aria-hidden="true"></div>
+        <p class="modal-categoria" id="modal-categoria"></p>
+        <h3 id="modal-titulo"></h3>
+        <img class="modal-imagen" id="modal-imagen" alt="">
+        <p id="modal-descripcion"></p>
+        <ul class="modal-tecnologias" id="modal-tecnologias"></ul>
+        <div class="modal-deco" aria-hidden="true"></div>
+        <a class="btn" id="modal-enlace" href="#" target="_blank" rel="noopener noreferrer"
+            data-i18n="modal-visitar">Visitar la página</a>
+    </dialog>
+
+    <script src="apps.js" defer></script>
+
+</body>
+
+
+</html>
