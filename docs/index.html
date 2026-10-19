@@ -63,7 +63,8 @@
 
         <section id="acerca">
             <h2 data-i18n="acerca-titulo">Acerca de mí</h2>
-            <img class="foto-perfil" src="assets/images/foto-perfil.jpeg" alt="Retrato de Abrahan Hernández Amado" width="200" height="200">
+            <img class="foto-perfil" src="assets/images/foto-perfil.jpeg" alt="Retrato de Abrahan Hernández Amado"
+                width="200" height="200">
             <div class="acerca-info">
                 <p data-i18n="acerca-p1">Soy una persona apasioanada por el arte urbano, la robotica y los videojuegos.
                     Me encanta darle ese estilo
@@ -91,37 +92,44 @@
                         </div>
                         <span class="habilidad-porcentaje">90%</span>
                     </div>
-
                     <div class="habilidad">
                         <div class="habilidad-info">
                             <span class="habilidad-nombre">CSS</span>
                             <div class="barra">
-                                <div class="progreso" data-ancho="80%"></div>
+                                <div class="progreso" data-ancho="75%"></div>
                             </div>
                         </div>
-                        <span class="habilidad-porcentaje">80%</span>
+                        <span class="habilidad-porcentaje">75%</span>
                     </div>
-
                     <div class="habilidad">
                         <div class="habilidad-info">
                             <span class="habilidad-nombre">JavaScript</span>
-                            <div class="barra">
-                                <div class="progreso" data-ancho="70%"></div>
-                            </div>
-                        </div>
-                        <span class="habilidad-porcentaje">70%</span>
-                    </div>
-
-                    <div class="habilidad">
-                        <div class="habilidad-info">
-                            <span class="habilidad-nombre">Node.js</span>
                             <div class="barra">
                                 <div class="progreso" data-ancho="60%"></div>
                             </div>
                         </div>
                         <span class="habilidad-porcentaje">60%</span>
                     </div>
+                    <div class="habilidad">
+                        <div class="habilidad-info">
+                            <span class="habilidad-nombre" data-i18n="habilidad-diseno">Diseño</span>
+                            <div class="barra">
+                                <div class="progreso" data-ancho="80%"></div>
+                            </div>
+                        </div>
+                        <span class="habilidad-porcentaje">80%</span>
+                    </div>
+                    <div class="habilidad">
+                        <div class="habilidad-info">
+                            <span class="habilidad-nombre">Node.js</span>
+                            <div class="barra">
+                                <div class="progreso" data-ancho="55%"></div>
+                            </div>
+                        </div>
+                        <span class="habilidad-porcentaje">55%</span>
+                    </div>
                 </div>
+            </div>
             </div>
         </section>
 
@@ -132,8 +140,9 @@
             <h2 data-i18n="proyectos-titulo">Proyectos</h2>
             <div id="project-list">
                 <article class="project" data-titulo="CALLES-DULCES" data-categoria="Página web"
-                    data-descripcion="¡Calles dulces es una reposteria que busca generar un impacto social mediante tus compras! Cada compra que hagas el 10% de esta ira a programas de reabilitacion y cursos gratuitos para las nuevas generaciones. ¡Se parte de este gran y ambicioso proyecto!" data-imagen="assets/images/CD.png"
-                    data-enlace="https://tu-usuario.github.io/Calles-Dulces" data-tecnologias="HTML,CSS,JavaScript">
+                    data-descripcion="¡Calles dulces es una reposteria que busca generar un impacto social mediante tus compras! Cada compra que hagas el 10% de esta ira a programas de reabilitacion y cursos gratuitos para las nuevas generaciones. ¡Se parte de este gran y ambicioso proyecto!"
+                    data-imagen="assets/images/CD.png" data-enlace="https://tu-usuario.github.io/Calles-Dulces"
+                    data-tecnologias="HTML,CSS,JavaScript">
                     <div class="project-img"></div>
                     <h3>CALLES DULCES</h3>
                     <p>una endulzada con doble alegria</p>
@@ -141,12 +150,23 @@
                 </article>
 
                 <article class="project" data-titulo="Kosmu" data-categoria="Página web"
-                    data-descripcion="Kosmu es un lugar donde podras encontrar nuevos estilos, ropa urbana y accesorios de otro mundo. ¡Crea tu estilo unico con nuestra ropa!" data-imagen="assets/images/kosmu.jpeg"
-                    data-enlace="https://tu-usuario.github.io/Kosmu-shop" data-tecnologias="HTML,CSS,Node.js">
+                    data-descripcion="Kosmu es un lugar donde podras encontrar nuevos estilos, ropa urbana y accesorios de otro mundo. ¡Crea tu estilo unico con nuestra ropa!"
+                    data-imagen="assets/images/kosmu.jpeg" data-enlace="https://tu-usuario.github.io/Kosmu-shop"
+                    data-tecnologias="HTML,CSS,Node.js">
                     <div class="project-img"></div>
                     <h3>Kosmu</h3>
                     <p>Crea tu estilo</p>
                     <button type="button" class="project-enlace" data-i18n="proyecto-detalles">Ver detalles →</button>
+                </article>
+
+                <article class="project project-proximo">
+                    <div class="proximo-fondo" aria-hidden="true">
+                        <div class="project-img"></div>
+                        <h3>CALLES DULCES</h3>
+                        <p>una endulzada con doble alegria</p>
+                        <span class="falso-enlace">Ver detalles →</span>
+                    </div>
+                    <p class="proximo-texto" data-i18n="proximo-texto">¡Más proyectos muy pronto!</p>
                 </article>
             </div>
         </section>
@@ -159,9 +179,13 @@
 
             <ul class="contacto-info">
                 <li class="info-item"><strong data-i18n="contacto-email">Email</strong>
-                    <span>hzabrahm2009@gmail.com</span></li>
-                <li class="info-item"><strong data-i18n="contacto-telefono">Teléfono</strong> <span>+57 311 524 4074</span></li>
-                <li class="info-item"><strong data-i18n="contacto-ubicacion">Ubicación</strong> <span>Bogota-Colombia</span></li>
+                    <span>hzabrahm2009@gmail.com</span>
+                </li>
+                <li class="info-item"><strong data-i18n="contacto-telefono">Teléfono</strong> <span>+57 311 524
+                        4074</span></li>
+                <li class="info-item"><strong data-i18n="contacto-ubicacion">Ubicación</strong>
+                    <span>Bogota-Colombia</span>
+                </li>
             </ul>
 
             <form id="contact-form">
@@ -209,7 +233,10 @@
         <a class="btn" id="modal-enlace" href="#" target="_blank" rel="noopener noreferrer"
             data-i18n="modal-visitar">Visitar la página</a>
     </dialog>
+
+    <script src="apps.js" defer></script>
+
 </body>
-<script src="apps.js" defer></script>
+
 
 </html>

@@ -20,6 +20,8 @@
    --color-acento: #FF6A13;
    --color-borde: #2A2A2A;
    --color-pista: #1F1F22;
+   --color-barra-inicio: #dc7209;
+   --color-barra-fin: #ecb725;
    --fuente-manuscrita: "Caveat", cursive;
  }
 
@@ -171,6 +173,23 @@
    flex-direction: column;
    justify-content: center;
    padding: 24px 20px;
+   background: linear-gradient(135deg, var(--fondo-color2), var(--color-borde), var(--fondo-color2));
+   background-size: 300% 300%;
+   animation: fondo-movil 12s ease-in-out infinite;
+ }
+
+ @keyframes fondo-movil {
+   0% {
+     background-position: 0% 50%;
+   }
+
+   50% {
+     background-position: 100% 50%;
+   }
+
+   100% {
+     background-position: 0% 50%;
+   }
  }
 
  .inicio-contenido {
@@ -181,7 +200,7 @@
 
  .inicio-contenido h1 {
    font-size: clamp(1.75rem, 9vw, 2.5rem);
-   max-width: 256px; 
+   max-width: 256px;
  }
 
  .inicio-decoracion {
@@ -203,6 +222,22 @@
    border: 2px solid var(--color-acento);
    border-radius: 40px;
    text-decoration: none;
+ }
+
+ .btn[aria-disabled="true"] {
+   opacity: 0.6;
+   border-style: dashed;
+   cursor: not-allowed;
+ }
+
+ :is(.btnH, .btn, .btnF, .project-enlace, .modal-cerrar) {
+   transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+ }
+
+ :is(.btnH, .btn:not([aria-disabled="true"]), .btnF, .project-enlace, .modal-cerrar):is(:hover, :focus-visible) {
+   transform: translateY(-2px);
+   background-color: color-mix(in srgb, var(--color-acento) 15%, transparent);
+   box-shadow: 0 0 12px color-mix(in srgb, var(--color-acento) 45%, transparent);
  }
 
  .divisor {
@@ -236,6 +271,7 @@
    flex-shrink: 0;
    border-radius: 16px;
    object-fit: cover;
+   align-self: center;
    border: 3px solid var(--color-acento);
  }
 
@@ -264,10 +300,15 @@
  }
 
  .project {
+   box-sizing: border-box;
+   width: 350px;
+   max-width: 100%;
+   height: 200px;
    display: flex;
    flex-direction: column;
    gap: 10px;
    padding: 16px;
+   overflow: hidden;
    background-color: var(--color-terciario);
    border: 1px solid var(--color-borde);
    border-radius: 14px;
@@ -286,20 +327,54 @@
  }
 
  .project-img {
-   height: 120px;
+   flex: 1;
+   min-height: 0px;
    border-radius: 10px;
    background: linear-gradient(135deg, var(--color-pista), var(--color-acento));
  }
 
  .project-enlace {
    align-self: flex-start;
-   padding: 0;
+   padding: 4px 10px;
+   margin-left: -10px;
+   border-radius: 8px;
    background: none;
    border: none;
    color: var(--color-acento);
    font-family: inherit;
    font-size: 1rem;
    cursor: pointer;
+ }
+
+ .project-proximo {
+   position: relative;
+   border-style: dashed;
+ }
+
+ .proximo-fondo {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   height: 100%;
+   filter: blur(4px);
+   opacity: 0.55;
+   pointer-events: none;
+   user-select: none;
+ }
+
+ .proximo-texto {
+   position: absolute;
+   inset: 0;
+   display: grid;
+   place-items: center;
+   text-align: center;
+   font-family: var(--fuente-manuscrita);
+   font-size: 1.6rem;
+   color: var(--color-acento);
+ }
+
+ .falso-enlace {
+   color: var(--color-acento);
  }
 
  .modal {
@@ -409,6 +484,7 @@
    background-color: var(--color-terciario);
    border: 1px solid var(--color-borde);
    border-radius: 14px;
+   box-sizing: border-box;
  }
 
  .habilidad-info {
@@ -430,33 +506,13 @@
  .progreso {
    width: 0;
    height: 100%;
-   background-color: var(--color-acento);
+   background: linear-gradient(90deg, var(--color-barra-inicio), var(--color-barra-fin));
    border-radius: 8px;
    transition: width 1.2s ease-out;
  }
 
  .habilidad-porcentaje {
    color: var(--color-acento);
- }
-
- #projects {
-   padding: 0 20px;
- }
-
- #project-list {
-   display: flex;
-   flex-wrap: wrap;
-   gap: 20px;
- }
-
- .project {
-   display: flex;
-   flex-direction: column;
-   max-width: 300px;
-   padding: 16px;
-   background-color: var(--color-terciario);
-   border: 1px solid var(--color-borde);
-   border-radius: 14px;
  }
 
  #mi-contacto {
@@ -584,6 +640,48 @@
    }
  }
 
+ #habilities-2 {
+   max-width: 1100px;
+ }
+
+ #habilities-container {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 20px;
+ }
+
+ .habilidad {
+   display: grid;
+   grid-template-columns: 1fr auto;
+   grid-template-areas:
+     "nombre porcentaje"
+     "barra barra";
+   gap: 12px 16px;
+ }
+
+ .habilidad-info {
+   display: contents;
+ }
+
+ .habilidad-nombre {
+   grid-area: nombre;
+ }
+
+ .habilidad-porcentaje {
+   grid-area: porcentaje;
+ }
+
+ .barra {
+   grid-area: barra;
+   margin-top: 0;
+ }
+
+ .habilidad:last-child {
+   grid-column: 1 / -1;
+   justify-self: center;
+   width: calc(50% - 10px);
+ }
+
 
  /* pc */
  @media (min-width: 1024px) {
@@ -618,3 +716,10 @@
      font-size: 1.1rem;
    }
  }
+
+ @media (prefers-reduced-motion: reduce) {
+  #inicio { animation: none; }
+  :is(.btnH, .btn, .btnF, .project-enlace, .modal-cerrar):is(:hover, :focus-visible) {
+    transform: none;
+  }
+}
